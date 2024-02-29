@@ -1,0 +1,3 @@
+/home/briankimurgor/slisp_interpreter/CMakeFiles/slisp.dir
+/home/briankimurgor/slisp_interpreter/CMakeFiles/edit_cache.dir
+/home/briankimurgor/slisp_interpreter/CMakeFiles/rebuild_cache.dir

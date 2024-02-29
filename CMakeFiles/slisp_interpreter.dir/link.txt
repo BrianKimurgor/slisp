@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/slisp_interpreter.dir/src/environment.cpp.o CMakeFiles/slisp_interpreter.dir/src/expression.cpp.o CMakeFiles/slisp_interpreter.dir/src/interpreter.cpp.o CMakeFiles/slisp_interpreter.dir/src/main.cpp.o CMakeFiles/slisp_interpreter.dir/src/tokenize.cpp.o -o slisp_interpreter 
