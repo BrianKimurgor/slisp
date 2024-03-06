@@ -69,10 +69,24 @@ include CMakeFiles/slisp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/slisp.dir/flags.make
 
+CMakeFiles/slisp.dir/src/main.cpp.o: CMakeFiles/slisp.dir/flags.make
+CMakeFiles/slisp.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/slisp.dir/src/main.cpp.o: CMakeFiles/slisp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slisp.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slisp.dir/src/main.cpp.o -MF CMakeFiles/slisp.dir/src/main.cpp.o.d -o CMakeFiles/slisp.dir/src/main.cpp.o -c /home/briankimurgor/slisp_interpreter/src/main.cpp
+
+CMakeFiles/slisp.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slisp.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/briankimurgor/slisp_interpreter/src/main.cpp > CMakeFiles/slisp.dir/src/main.cpp.i
+
+CMakeFiles/slisp.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slisp.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/briankimurgor/slisp_interpreter/src/main.cpp -o CMakeFiles/slisp.dir/src/main.cpp.s
+
 CMakeFiles/slisp.dir/src/environment.cpp.o: CMakeFiles/slisp.dir/flags.make
 CMakeFiles/slisp.dir/src/environment.cpp.o: src/environment.cpp
 CMakeFiles/slisp.dir/src/environment.cpp.o: CMakeFiles/slisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/slisp.dir/src/environment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slisp.dir/src/environment.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slisp.dir/src/environment.cpp.o -MF CMakeFiles/slisp.dir/src/environment.cpp.o.d -o CMakeFiles/slisp.dir/src/environment.cpp.o -c /home/briankimurgor/slisp_interpreter/src/environment.cpp
 
 CMakeFiles/slisp.dir/src/environment.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/slisp.dir/src/environment.cpp.s: cmake_force
 CMakeFiles/slisp.dir/src/expression.cpp.o: CMakeFiles/slisp.dir/flags.make
 CMakeFiles/slisp.dir/src/expression.cpp.o: src/expression.cpp
 CMakeFiles/slisp.dir/src/expression.cpp.o: CMakeFiles/slisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slisp.dir/src/expression.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/slisp.dir/src/expression.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slisp.dir/src/expression.cpp.o -MF CMakeFiles/slisp.dir/src/expression.cpp.o.d -o CMakeFiles/slisp.dir/src/expression.cpp.o -c /home/briankimurgor/slisp_interpreter/src/expression.cpp
 
 CMakeFiles/slisp.dir/src/expression.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/slisp.dir/src/expression.cpp.s: cmake_force
 CMakeFiles/slisp.dir/src/interpreter.cpp.o: CMakeFiles/slisp.dir/flags.make
 CMakeFiles/slisp.dir/src/interpreter.cpp.o: src/interpreter.cpp
 CMakeFiles/slisp.dir/src/interpreter.cpp.o: CMakeFiles/slisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/slisp.dir/src/interpreter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/slisp.dir/src/interpreter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slisp.dir/src/interpreter.cpp.o -MF CMakeFiles/slisp.dir/src/interpreter.cpp.o.d -o CMakeFiles/slisp.dir/src/interpreter.cpp.o -c /home/briankimurgor/slisp_interpreter/src/interpreter.cpp
 
 CMakeFiles/slisp.dir/src/interpreter.cpp.i: cmake_force
@@ -110,20 +124,6 @@ CMakeFiles/slisp.dir/src/interpreter.cpp.i: cmake_force
 CMakeFiles/slisp.dir/src/interpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slisp.dir/src/interpreter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/briankimurgor/slisp_interpreter/src/interpreter.cpp -o CMakeFiles/slisp.dir/src/interpreter.cpp.s
-
-CMakeFiles/slisp.dir/src/main.cpp.o: CMakeFiles/slisp.dir/flags.make
-CMakeFiles/slisp.dir/src/main.cpp.o: src/main.cpp
-CMakeFiles/slisp.dir/src/main.cpp.o: CMakeFiles/slisp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/briankimurgor/slisp_interpreter/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/slisp.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slisp.dir/src/main.cpp.o -MF CMakeFiles/slisp.dir/src/main.cpp.o.d -o CMakeFiles/slisp.dir/src/main.cpp.o -c /home/briankimurgor/slisp_interpreter/src/main.cpp
-
-CMakeFiles/slisp.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slisp.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/briankimurgor/slisp_interpreter/src/main.cpp > CMakeFiles/slisp.dir/src/main.cpp.i
-
-CMakeFiles/slisp.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slisp.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/briankimurgor/slisp_interpreter/src/main.cpp -o CMakeFiles/slisp.dir/src/main.cpp.s
 
 CMakeFiles/slisp.dir/src/tokenize.cpp.o: CMakeFiles/slisp.dir/flags.make
 CMakeFiles/slisp.dir/src/tokenize.cpp.o: src/tokenize.cpp
@@ -141,19 +141,19 @@ CMakeFiles/slisp.dir/src/tokenize.cpp.s: cmake_force
 
 # Object files for target slisp
 slisp_OBJECTS = \
+"CMakeFiles/slisp.dir/src/main.cpp.o" \
 "CMakeFiles/slisp.dir/src/environment.cpp.o" \
 "CMakeFiles/slisp.dir/src/expression.cpp.o" \
 "CMakeFiles/slisp.dir/src/interpreter.cpp.o" \
-"CMakeFiles/slisp.dir/src/main.cpp.o" \
 "CMakeFiles/slisp.dir/src/tokenize.cpp.o"
 
 # External object files for target slisp
 slisp_EXTERNAL_OBJECTS =
 
+slisp: CMakeFiles/slisp.dir/src/main.cpp.o
 slisp: CMakeFiles/slisp.dir/src/environment.cpp.o
 slisp: CMakeFiles/slisp.dir/src/expression.cpp.o
 slisp: CMakeFiles/slisp.dir/src/interpreter.cpp.o
-slisp: CMakeFiles/slisp.dir/src/main.cpp.o
 slisp: CMakeFiles/slisp.dir/src/tokenize.cpp.o
 slisp: CMakeFiles/slisp.dir/build.make
 slisp: CMakeFiles/slisp.dir/link.txt

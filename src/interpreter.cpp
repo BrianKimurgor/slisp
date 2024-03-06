@@ -54,11 +54,85 @@ Expression Interpreter::evaluateExpression(const Expression & exp) {
   } else {
     // For expressions, recursively evaluate each child
     Expression result;
-    for (const auto & child: exp.children) {
+    for (const auto & child : exp.children) {
       result.children.push_back(evaluateExpression(child));
     }
 
     // Check for special forms and procedures and handle accordingly
+
+    if (!result.children.empty() && result.children[0].type == AtomType::Symbol) {
+      const std::string &op = result.children[0].symValue;
+      if (op == "define") {
+        // Handle define expression
+        if (result.children.size() != 3) {
+          throw InterpreterSemanticError("Error: define requires exactly two arguments");
+        }
+
+        // Assume the second child is the symbol to be defined and the third child is its value
+        const std::string &symbol = result.children[1].symValue;
+        Expression value = evaluateExpression(result.children[2]);
+
+        // Update environment or store the defined symbol and its value
+        // TODO: Implement logic to store the symbol and its value
+
+        // Return the defined value for demonstration purposes
+        return value;
+      } else if (op == "+") {
+        // Handle addition
+        if (result.children.size() < 2) {
+          throw InterpreterSemanticError("Error: Addition requires at least two arguments");
+        }
+        double sum = 0;
+        for (size_t i = 1; i < result.children.size(); ++i) {
+          if (result.children[i].type != AtomType::Number) {
+            throw InterpreterSemanticError("Error: Addition requires numeric arguments");
+          }
+          sum += result.children[i].numValue;
+        }
+        return Expression(sum);
+      } else if (op == "-") {
+        // Handle subtraction
+        if (result.children.size() < 2) {
+          throw InterpreterSemanticError("Error: Subtraction requires at least two arguments");
+        }
+        double diff = result.children[1].numValue;
+        for (size_t i = 2; i < result.children.size(); ++i) {
+          if (result.children[i].type != AtomType::Number) {
+            throw InterpreterSemanticError("Error: Subtraction requires numeric arguments");
+          }
+          diff -= result.children[i].numValue;
+        }
+        return Expression(diff);
+      } else if (op == "*") {
+        // Handle multiplication
+        if (result.children.size() < 2) {
+          throw InterpreterSemanticError("Error: Multiplication requires at least two arguments");
+        }
+        double product = 1;
+        for (size_t i = 1; i < result.children.size(); ++i) {
+          if (result.children[i].type != AtomType::Number) {
+            throw InterpreterSemanticError("Error: Multiplication requires numeric arguments");
+          }
+          product *= result.children[i].numValue;
+        }
+        return Expression(product);
+      } else if (op == "/") {
+        // Handle division
+        if (result.children.size() != 3) {
+          throw InterpreterSemanticError("Error: Division requires exactly two arguments");
+        }
+        double numerator, denominator;
+        if (result.children[1].type != AtomType::Number || result.children[2].type != AtomType::Number) {
+          throw InterpreterSemanticError("Error: Division requires numeric arguments");
+        }
+        numerator = result.children[1].numValue;
+        denominator = result.children[2].numValue;
+        if (denominator == 0) {
+          throw InterpreterSemanticError("Error: Division by zero");
+        }
+        return Expression(numerator / denominator);
+      }
+    }
     // TODO: Implement special form and procedure handling
 
     // For simplicity, assuming here that the expression itself is the result
@@ -66,23 +140,24 @@ Expression Interpreter::evaluateExpression(const Expression & exp) {
   }
 }
 
-bool Interpreter::parse(std::string & expression) noexcept {
-  try {
-    // Parse the input expression to get the AST
-    Expression ast = parseExpression(expression);
+bool Interpreter::parse(std::string& expression) noexcept {
+    try {
+        // Parse the input expression to get the AST
+        Expression ast = parseExpression(expression);
 
-    // TODO: Store the AST for later evaluation
-    // Here, just printing the AST for demonstration purposes
-    std::cout << " " << ast << std::endl;
+        // TODO: Store the AST for later evaluation
+        // Here, just printing the AST for demonstration purposes
+        std::cout << " " << ast << std::endl;
 
-    // Store the AST for later evaluation
-    // TODO: Implement AST storage logic
+        // Store the AST for later evaluation
+        // TODO: Implement AST storage logic
 
-    return true; // Return true if parsing is successful
-  } catch (...) {
-    return false; // Return false on failure
-  }
+        return true; // Return true if parsing is successful
+    } catch (...) {
+        return false; // Return false on failure
+    }
 }
+
 
 void Interpreter::runREPL() {
   std::string input;
